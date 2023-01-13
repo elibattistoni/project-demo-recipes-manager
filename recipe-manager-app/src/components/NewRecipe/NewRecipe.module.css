@@ -1,0 +1,19 @@
+.card--new-recipe {
+  background-color: var(--color-pink-light-60);
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.4rem;
+  padding: 1.4rem 0;
+}
+
+.btn--new-recipe {
+  background-color: var(--color-pink-light-20);
+  padding: 1.4rem 2.4rem;
+  color: var(--color-pink-dark-40);
+  border: 2px solid var(--color-pink);
+}
+
+.btn--new-recipe:hover, .btn--new-recipe:active {
+  background-color: var(--color-pink);
+}
