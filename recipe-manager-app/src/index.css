@@ -122,7 +122,8 @@ Medium: 11px i.e. 0.7rem
 
   --box-shadow-primary: 0 1px 5px rgba(0, 0, 0, 0.15);
 
-  --border-radius-primary: 10px;
+  --border-radius-normal: 10px;
+  --border-radius-small: 5px;
 
 }
 
@@ -149,7 +150,8 @@ body {
 button {
   font-family: inherit;
   cursor: pointer;
-  border-radius: var(--border-radius-primary);
+  color: var(--color-grey-w-70);
+  border-radius: var(--border-radius-normal);
   border: none;
   font-size: 1.8rem;
   transition: all 0.3s;

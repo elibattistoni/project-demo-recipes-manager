@@ -8,27 +8,30 @@ const NewRecipe = (props) => {
   const [wantsToAdd, setWantsToAdd] = useState(false);
 
   // handler for showing the form (change the state)
-  const showFormHandler = () => setWantsToAdd(true);
+  const toggleFormHandler = () =>
+    setWantsToAdd((currentState) => !currentState);
 
   // handler for hiding the form (change the state)
   const hideFormHandler = () => setWantsToAdd(false);
 
   // handler for adding the recipe
   const addRecipeHandler = (recipeData) => {
-    console.log(recipeData);
+    console.log("recipeData", recipeData);
+    //TODO send request to db
+    setWantsToAdd(false);
   };
 
   return (
-    <Card className={classes["card--new-recipe"]}>
-      {!wantsToAdd && (
-        <button
-          className={classes["btn--new-recipe"]}
-          onClick={showFormHandler}
-        >
-          Add New Recipe
-        </button>
+    <Card className={classes["new-recipe__card"]}>
+      <button
+        className={classes["new-recipe__btn"]}
+        onClick={toggleFormHandler}
+      >
+        Add New Recipe
+      </button>
+      {wantsToAdd && (
+        <RecipeForm onClose={hideFormHandler} onSubmitForm={addRecipeHandler} />
       )}
-      {wantsToAdd && <RecipeForm />}
     </Card>
   );
 };
