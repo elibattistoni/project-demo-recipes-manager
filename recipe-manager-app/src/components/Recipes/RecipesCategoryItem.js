@@ -25,9 +25,8 @@ export default function RecipesCategoryItem(props) {
         {categoryRecipes.map((recipe) => (
           <RecipeItem
             key={recipe.id}
-            title={recipe.title}
+            recipe={recipe}
             color={currentCategoryColor}
-            image={recipe.imageUrl}
           />
         ))}
       </main>

@@ -14,7 +14,7 @@ export default function NewRecipe(props) {
   const hideFormHandler = () => setWantsToAdd(false);
 
   return (
-    <div className={classes["new-recipe__card"]}>
+    <section className={classes["new-recipe__card"]}>
       <button
         className={classes["new-recipe__btn"]}
         onClick={toggleFormHandler}
@@ -22,6 +22,6 @@ export default function NewRecipe(props) {
         Add New Recipe
       </button>
       {wantsToAdd && <RecipeForm onClose={hideFormHandler} />}
-    </div>
+    </section>
   );
 }

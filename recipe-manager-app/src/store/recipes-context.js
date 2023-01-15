@@ -6,10 +6,13 @@ const RecipesContext = React.createContext({
   onAddRecipe: (recipeData) => {},
   onRemoveRecipe: (recipeId) => {},
   onRemoveAllRecipes: () => {},
+  activatedRecipe: null,
+  onActivateRecipe: () => {},
 });
 
 export function RecipesContextProvider(props) {
   const [recipes, setRecipes] = useState([]);
+  const [activatedRecipe, setActivatedRecipe] = useState(null);
 
   function uploadInitialRecipes() {
     localStorage.setItem("recipes", JSON.stringify(initialMockedRecipes));
@@ -52,9 +55,20 @@ export function RecipesContextProvider(props) {
     localStorage.removeItem("recipes");
   }
 
+  function onActivateRecipe(recipeId) {
+    setActivatedRecipe(recipes.filter((rec) => rec.id === recipeId).at(0));
+  }
+
   return (
     <RecipesContext.Provider
-      value={{ recipes, onAddRecipe, onRemoveRecipe, onRemoveAllRecipes }}
+      value={{
+        recipes,
+        onAddRecipe,
+        onRemoveRecipe,
+        onRemoveAllRecipes,
+        activatedRecipe,
+        onActivateRecipe,
+      }}
     >
       {props.children}
     </RecipesContext.Provider>

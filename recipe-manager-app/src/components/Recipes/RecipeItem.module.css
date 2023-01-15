@@ -2,6 +2,9 @@
   width: 90%;
   margin: auto;
   box-shadow: var(--box-shadow-secondary);
+  cursor: pointer;
+  border-radius: var(--border-radius-normal);
+  box-shadow: var(--box-shadow-primary)
 }
 
 .recipeCard header {
