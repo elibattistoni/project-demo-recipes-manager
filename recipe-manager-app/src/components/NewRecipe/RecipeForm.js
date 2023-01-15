@@ -1,6 +1,8 @@
 import useInput from "../../hooks/use-input";
 import { foodCategories } from "../../config";
 import classes from "./RecipeForm.module.css";
+import { useContext } from "react";
+import RecipesContext from "../../store/recipes-context";
 
 function isValidHttpUrl(str) {
   const pattern = new RegExp(
@@ -16,6 +18,9 @@ function isValidHttpUrl(str) {
 }
 
 export default function RecipeForm(props) {
+  //| access context to add recipe
+  const ctx = useContext(RecipesContext);
+
   //| title
   const {
     value: inputTitle,
@@ -88,6 +93,7 @@ export default function RecipeForm(props) {
     if (!formIsValid) return;
 
     const recipeData = {
+      id: Date.now().toString(),
       title: inputTitle,
       category: inputCategory,
       imageUrl: inputUrl,
@@ -96,7 +102,7 @@ export default function RecipeForm(props) {
       instructions: inputInstructions,
     };
 
-    console.log(recipeData);
+    ctx.onAddRecipe(recipeData);
 
     clearTitle();
     clearCategory();
@@ -104,7 +110,7 @@ export default function RecipeForm(props) {
     clearIngredients();
     clearInstructions();
 
-    props.onSubmitForm(recipeData);
+    props.onClose();
   };
 
   // css classes

@@ -14,13 +14,6 @@ export default function NewRecipe(props) {
   // handler for hiding the form (change the state)
   const hideFormHandler = () => setWantsToAdd(false);
 
-  // handler for adding the recipe
-  const addRecipeHandler = (recipeData) => {
-    console.log("recipeData", recipeData);
-    //TODO send request to db
-    setWantsToAdd(false);
-  };
-
   return (
     <Card className={classes["new-recipe__card"]}>
       <button
@@ -29,9 +22,7 @@ export default function NewRecipe(props) {
       >
         Add New Recipe
       </button>
-      {wantsToAdd && (
-        <RecipeForm onClose={hideFormHandler} onSubmitForm={addRecipeHandler} />
-      )}
+      {wantsToAdd && <RecipeForm onClose={hideFormHandler} />}
     </Card>
   );
 }
