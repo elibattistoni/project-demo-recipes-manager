@@ -1,12 +1,10 @@
 import { Fragment } from "react";
 import NewRecipe from "./components/NewRecipe/NewRecipe";
 
-function App() {
+export default function App() {
   return (
     <Fragment>
       <NewRecipe />
     </Fragment>
   );
 }
-
-export default App;

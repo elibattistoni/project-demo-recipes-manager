@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 import { useState } from "react";
 import RecipeForm from "./RecipeForm";
 
-const NewRecipe = (props) => {
+export default function NewRecipe(props) {
   // state for managing the form
   const [wantsToAdd, setWantsToAdd] = useState(false);
 
@@ -34,6 +34,4 @@ const NewRecipe = (props) => {
       )}
     </Card>
   );
-};
-
-export default NewRecipe;
+}
