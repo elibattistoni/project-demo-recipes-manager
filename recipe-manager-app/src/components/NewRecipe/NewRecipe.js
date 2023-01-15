@@ -1,5 +1,4 @@
 import classes from "./NewRecipe.module.css";
-import Card from "../UI/Card";
 import { useState } from "react";
 import RecipeForm from "./RecipeForm";
 
@@ -15,7 +14,7 @@ export default function NewRecipe(props) {
   const hideFormHandler = () => setWantsToAdd(false);
 
   return (
-    <Card className={classes["new-recipe__card"]}>
+    <div className={classes["new-recipe__card"]}>
       <button
         className={classes["new-recipe__btn"]}
         onClick={toggleFormHandler}
@@ -23,6 +22,6 @@ export default function NewRecipe(props) {
         Add New Recipe
       </button>
       {wantsToAdd && <RecipeForm onClose={hideFormHandler} />}
-    </Card>
+    </div>
   );
 }

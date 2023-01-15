@@ -32,7 +32,6 @@ export function RecipesContextProvider(props) {
   }, []);
 
   function onAddRecipe(recipeData) {
-    // NB TODO CHECK
     setRecipes((currRecipes) => {
       return [recipeData, ...currRecipes];
     });
@@ -40,6 +39,7 @@ export function RecipesContextProvider(props) {
 
   function onRemoveRecipe(recipeId) {
     // NB TODO CHECK
+    console.log("CHECK THIS FUNCTION onRemoveRecipe");
     setRecipes((currRecipes) =>
       currRecipes.filter((rec) => rec.id !== recipeId)
     );
@@ -48,6 +48,7 @@ export function RecipesContextProvider(props) {
 
   function onRemoveAllRecipes() {
     // NB TODO check
+    console.log("CHECK THIS FUNCTION onRemoveAllRecipes");
     localStorage.removeItem("recipes");
   }
 

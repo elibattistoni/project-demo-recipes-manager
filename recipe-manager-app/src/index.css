@@ -121,6 +121,7 @@ Medium: 11px i.e. 0.7rem
   --color-yellow-dark-40: #999776;
 
   --box-shadow-primary: 0 1px 5px rgba(0, 0, 0, 0.15);
+  --box-shadow-secondary: 0 1px 5px rgba(0, 0, 0, 0.3);
 
   --border-radius-normal: 10px;
   --border-radius-small: 5px;
@@ -143,7 +144,7 @@ html {
 body {
   font-family: 'Mulish', sans-serif;
   font-weight: 500;
-  background-color: var(--color-white);
+  background-color: var(--color-white-light-30);
   color: var(--color-black)
 }
 
@@ -155,4 +156,36 @@ button {
   border: none;
   font-size: 1.8rem;
   transition: all 0.3s;
+}
+
+.blue {
+  background-color: var(--color-blue-light-40);
+}
+
+.green {
+  background-color: var(--color-green-light-40);
+}
+
+.brown {
+  background-color: var(--color-brown-light-40);
+}
+
+.yellow {
+  background-color: var(--color-yellow-light-40);
+}
+
+.blue-lighter {
+  background-color: var(--color-blue-light-60);
+}
+
+.green-lighter {
+  background-color: var(--color-green-light-60);
+}
+
+.brown-lighter {
+  background-color: var(--color-brown-light-60);
+}
+
+.yellow-lighter {
+  background-color: var(--color-yellow-light-60);
 }

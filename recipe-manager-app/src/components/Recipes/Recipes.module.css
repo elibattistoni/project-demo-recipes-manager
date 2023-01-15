@@ -1,6 +1,9 @@
 .recipesContainer {
   width: 90%;
   margin: auto;
+  margin-top: 4rem;
   display: grid;
+  column-gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
+  font-size: 1.8rem;
 }

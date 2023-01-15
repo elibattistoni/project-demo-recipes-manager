@@ -1,8 +1,23 @@
 export const foodCategories = [
-  { value: "risottoPasta", label: "Risotto & Pasta", key: 0 },
-  { value: "meatFish", label: "Meat & Fish", key: 1 },
-  { value: "veggiesSides", label: "Veggies & Sides", key: 2 },
-  { value: "dessertsSweets", label: "Desserts & Sweets", key: 3 },
+  {
+    value: "risottoPasta",
+    label: "Risotto & Pasta",
+    key: 0,
+    primaryColor: "blue",
+  },
+  { value: "meatFish", label: "Meat & Fish", key: 1, primaryColor: "brown" },
+  {
+    value: "veggiesSides",
+    label: "Veggies & Sides",
+    key: 2,
+    primaryColor: "green",
+  },
+  {
+    value: "dessertsSweets",
+    label: "Desserts & Sweets",
+    key: 3,
+    primaryColor: "yellow",
+  },
 ];
 
 export const initialMockedRecipes = [
