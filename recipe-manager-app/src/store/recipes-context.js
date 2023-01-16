@@ -14,8 +14,8 @@ export function RecipesContextProvider(props) {
   const [recipes, setRecipes] = useState([]);
   const [activatedRecipe, setActivatedRecipe] = useState(null);
 
-  function uploadInitialRecipes() {
-    localStorage.setItem("recipes", JSON.stringify(initialMockedRecipes));
+  function uploadUpdateRecipes(recipeArray) {
+    localStorage.setItem("recipes", JSON.stringify(recipeArray));
   }
 
   function retrieveRecipesHandler() {
@@ -28,7 +28,7 @@ export function RecipesContextProvider(props) {
     let storedRecipes;
     storedRecipes = retrieveRecipesHandler();
     if (!storedRecipes) {
-      uploadInitialRecipes();
+      uploadUpdateRecipes(initialMockedRecipes);
       storedRecipes = retrieveRecipesHandler();
     }
     setRecipes(storedRecipes);
@@ -36,7 +36,9 @@ export function RecipesContextProvider(props) {
 
   function onAddRecipe(recipeData) {
     setRecipes((currRecipes) => {
-      return [recipeData, ...currRecipes];
+      const newRecipeArray = [recipeData, ...currRecipes];
+      uploadUpdateRecipes(newRecipeArray);
+      return newRecipeArray;
     });
   }
 

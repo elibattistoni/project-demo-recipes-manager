@@ -22,7 +22,7 @@ export const foodCategories = [
 
 export const initialMockedRecipes = [
   {
-    id: 1,
+    id: "1",
     title: "Pasta alla carbonara",
     category: "risottoPasta",
     imageUrl:
@@ -32,7 +32,7 @@ export const initialMockedRecipes = [
     instructions: "Cook the pasta and in another pan cook the bacon",
   },
   {
-    id: 2,
+    id: "2",
     title: "Risotto radicchio e salsiccia",
     category: "risottoPasta",
     imageUrl:
@@ -42,7 +42,7 @@ export const initialMockedRecipes = [
     instructions: "Cook the rice with broth and in the end add the sausage",
   },
   {
-    id: 3,
+    id: "3",
     title: "Vitello Tonnato",
     category: "meatFish",
     imageUrl:
@@ -52,7 +52,7 @@ export const initialMockedRecipes = [
     instructions: "Cook the meat overnight and make a sause with the tuna",
   },
   {
-    id: 4,
+    id: "4",
     title: "Polpo alla brace",
     category: "meatFish",
     imageUrl:
@@ -62,7 +62,7 @@ export const initialMockedRecipes = [
     instructions: "Cook the octopus and serve with a sprinkle of lemon juice",
   },
   {
-    id: 5,
+    id: "5",
     title: "Patate arrosto",
     category: "veggiesSides",
     imageUrl:
@@ -72,7 +72,7 @@ export const initialMockedRecipes = [
     instructions: "Cut the potatoes and bake them",
   },
   {
-    id: 6,
+    id: "6",
     title: "Melanzane alla parmigiana",
     category: "veggiesSides",
     imageUrl:
@@ -82,7 +82,7 @@ export const initialMockedRecipes = [
     instructions: "Cut the aubergines in slices and fry them",
   },
   {
-    id: 7,
+    id: "7",
     title: "Zucchini Brownies",
     category: "dessertsSweets",
     imageUrl:
@@ -92,7 +92,7 @@ export const initialMockedRecipes = [
     instructions: "Mix the shredded with the cacao powder",
   },
   {
-    id: 8,
+    id: "8",
     title: "Salame di cioccolato",
     category: "dessertsSweets",
     imageUrl:
