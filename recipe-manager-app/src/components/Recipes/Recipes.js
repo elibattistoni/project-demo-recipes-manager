@@ -5,7 +5,7 @@ import { FaTrash } from "react-icons/fa";
 import { Fragment, useContext } from "react";
 import RecipesContext from "../../store/recipes-context";
 
-export default function Recipes(props) {
+export default function Recipes() {
   const ctx = useContext(RecipesContext);
 
   function removeAllRecipesHandler() {

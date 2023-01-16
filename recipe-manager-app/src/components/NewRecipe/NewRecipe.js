@@ -3,7 +3,7 @@ import { useState } from "react";
 import RecipeForm from "./RecipeForm";
 import { FaPlus } from "react-icons/fa";
 
-export default function NewRecipe(props) {
+export default function NewRecipe() {
   // state for managing the form
   const [wantsToAdd, setWantsToAdd] = useState(false);
 
