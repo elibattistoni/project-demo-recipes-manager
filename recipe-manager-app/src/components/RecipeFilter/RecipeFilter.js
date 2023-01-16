@@ -14,11 +14,14 @@ export default function RecipeFilter(props) {
   availableYears.sort((a, b) => a - b);
 
   function onFilterHandler(e) {
-    setFilteredYear(e.target.textContent);
+    const year = e.target.textContent;
+    setFilteredYear(year);
+    ctx.onFilterRecipes(year);
   }
 
   function onClearFilter() {
     setFilteredYear(null);
+    ctx.onRemoveFilterRecipes();
   }
 
   return (

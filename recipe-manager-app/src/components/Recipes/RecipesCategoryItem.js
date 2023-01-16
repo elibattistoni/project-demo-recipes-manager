@@ -12,7 +12,13 @@ export default function RecipesCategoryItem(props) {
   const { label: currentCategoryLabel, primaryColor: currentCategoryColor } =
     foodCategories.filter((cat) => cat.value === currentCategory).at(0);
 
-  const categoryRecipes = ctx.recipes.filter(
+  let currentRecipes;
+  if (ctx.filteredRecipes.length > 0) {
+    currentRecipes = ctx.filteredRecipes;
+  } else {
+    currentRecipes = ctx.recipes;
+  }
+  const categoryRecipes = currentRecipes.filter(
     (recipe) => recipe.category === currentCategory
   );
 
