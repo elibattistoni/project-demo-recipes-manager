@@ -26,6 +26,18 @@
   color: var(--color-grey-w-70);
 }
 
+.btnClear {
+  margin: 1rem 0;
+  margin-left: auto;
+  padding: 1rem 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.btnClear:hover, .btnClear:active {
+  background-color: var(--color-pink);
+}
+
 .active {
   border-color: var(--color-grey-w-80);
   font-weight: 700;

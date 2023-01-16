@@ -17,6 +17,10 @@ export default function RecipeFilter(props) {
     setFilteredYear(e.target.textContent);
   }
 
+  function onClearFilter() {
+    setFilteredYear(null);
+  }
+
   return (
     <section className={classes.filterContainer}>
       <div className={classes.filterButtons}>
@@ -31,6 +35,9 @@ export default function RecipeFilter(props) {
             {el}
           </button>
         ))}
+        <button className={classes.btnClear} onClick={onClearFilter}>
+          Clear
+        </button>
       </div>
     </section>
   );
