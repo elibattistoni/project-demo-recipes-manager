@@ -7,3 +7,25 @@
   grid-template-columns: repeat(4, 1fr);
   font-size: 1.8rem;
 }
+
+.footerTrash {
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.trashBtn {
+  margin: 0;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  padding: 1rem
+}
+
+.trashBtn:hover, .trashBtn:active {
+  background-color: var(--color-pink);
+}
+
+.trashIcon {
+  font-size: 1.6rem;
+}

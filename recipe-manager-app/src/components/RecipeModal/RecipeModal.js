@@ -1,6 +1,8 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import ReactDOM from "react-dom";
+import { FaTrash } from "react-icons/fa";
 import { foodCategories } from "../../config";
+import RecipesContext from "../../store/recipes-context";
 import classes from "./RecipeModal.module.css";
 
 function Backdrop(props) {
@@ -8,12 +10,18 @@ function Backdrop(props) {
 }
 
 function Overlay(props) {
+  const ctx = useContext(RecipesContext);
+
   const recipe = props.recipe;
 
   const { primaryColor: currentCategoryColor } = foodCategories
     .filter((cat) => cat.value === recipe.category)
     .at(0);
-  console.log(currentCategoryColor);
+
+  function removeRecipeHandler() {
+    ctx.onRemoveRecipe(recipe.id);
+    props.onCloseModal();
+  }
 
   return (
     <div className={classes.modal}>
@@ -32,6 +40,15 @@ function Overlay(props) {
           <span>{recipe.instructions}</span>
         </div>
       </main>
+      <footer>
+        <button
+          type="button"
+          className={classes.trashBtn}
+          onClick={removeRecipeHandler}
+        >
+          <FaTrash className={classes.trashIcon} />
+        </button>
+      </footer>
     </div>
   );
 }
@@ -45,7 +62,10 @@ export default function RecipeModal(props) {
         <Backdrop onCloseModal={props.onCloseModal} />,
         portalElement
       )}
-      {ReactDOM.createPortal(<Overlay recipe={props.recipe} />, portalElement)}
+      {ReactDOM.createPortal(
+        <Overlay recipe={props.recipe} onCloseModal={props.onCloseModal} />,
+        portalElement
+      )}
     </Fragment>
   );
 }

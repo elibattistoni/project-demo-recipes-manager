@@ -1,6 +1,7 @@
 import classes from "./NewRecipe.module.css";
 import { useState } from "react";
 import RecipeForm from "./RecipeForm";
+import { FaPlus } from "react-icons/fa";
 
 export default function NewRecipe(props) {
   // state for managing the form
@@ -19,7 +20,8 @@ export default function NewRecipe(props) {
         className={classes["new-recipe__btn"]}
         onClick={toggleFormHandler}
       >
-        Add New Recipe
+        <FaPlus className={classes.icon} />
+        <span>Add New Recipe</span>
       </button>
       {wantsToAdd && <RecipeForm onClose={hideFormHandler} />}
     </section>

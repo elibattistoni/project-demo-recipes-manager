@@ -43,17 +43,15 @@ export function RecipesContextProvider(props) {
   }
 
   function onRemoveRecipe(recipeId) {
-    // NB TODO CHECK
-    console.log("CHECK THIS FUNCTION onRemoveRecipe");
-    setRecipes((currRecipes) =>
-      currRecipes.filter((rec) => rec.id !== recipeId)
-    );
-    localStorage.setItem("recipes", JSON.stringify(recipes));
+    setRecipes((currRecipes) => {
+      const newRecipeArray = currRecipes.filter((rec) => rec.id !== recipeId);
+      uploadUpdateRecipes(newRecipeArray);
+      return newRecipeArray;
+    });
   }
 
   function onRemoveAllRecipes() {
-    // NB TODO check
-    console.log("CHECK THIS FUNCTION onRemoveAllRecipes");
+    setRecipes([]);
     localStorage.removeItem("recipes");
   }
 
