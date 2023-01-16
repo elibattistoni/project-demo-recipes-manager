@@ -86,7 +86,7 @@ export const initialMockedRecipes = [
     title: "Zucchini Brownies",
     category: "dessertsSweets",
     imageUrl:
-      "https://unboundwellness.com/wp-content/uploads/2018/08/zucchini_brownies_4.jpg",
+      "https://iambaker.net/wp-content/uploads/2018/06/zucchini-brownies-1.jpg",
     date: "1/15/2023",
     ingredients: "Zucchini, 2 cups; cacao powder, 1/2 cup;",
     instructions: "Mix the shredded with the cacao powder",

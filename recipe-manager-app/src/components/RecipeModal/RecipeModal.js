@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
+import { foodCategories } from "../../config";
 import classes from "./RecipeModal.module.css";
 
 function Backdrop(props) {
@@ -8,7 +9,31 @@ function Backdrop(props) {
 
 function Overlay(props) {
   const recipe = props.recipe;
-  return <div className={classes.modal}>{recipe.title}</div>;
+
+  const { primaryColor: currentCategoryColor } = foodCategories
+    .filter((cat) => cat.value === recipe.category)
+    .at(0);
+  console.log(currentCategoryColor);
+
+  return (
+    <div className={classes.modal}>
+      <header className={`${classes.modalHeader} ${currentCategoryColor}`}>
+        <h1>{recipe.title}</h1>
+        <span>{recipe.date}</span>
+      </header>
+      <main className={classes.modalMain}>
+        <img src={recipe.imageUrl} alt={recipe.title} />
+        <div className={classes.modalIngredients}>
+          <h2>Ingredients</h2>
+          <span>{recipe.ingredients}</span>
+        </div>
+        <div className={classes.modalInstructions}>
+          <h2>Instructions</h2>
+          <span>{recipe.instructions}</span>
+        </div>
+      </main>
+    </div>
+  );
 }
 
 const portalElement = document.getElementById("overlay");
