@@ -39,8 +39,13 @@
 }
 
 .active {
-  border-color: var(--color-grey-w-80);
-  font-weight: 700;
+  background-color: var(--color-pink-light-20);
+  border: 2px solid var(--color-pink);
+  color: var(--color-grey-w-70)
+}
+
+.active:hover, .active:active {
+  background-color: var(--color-pink);
 }
 
 .inactive {

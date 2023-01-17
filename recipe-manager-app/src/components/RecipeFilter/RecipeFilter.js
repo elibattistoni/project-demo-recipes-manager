@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import RecipesContext from "../../store/recipes-context";
 import classes from "./RecipeFilter.module.css";
 
-export default function RecipeFilter(props) {
+export default function RecipeFilter() {
   const [filteredYear, setFilteredYear] = useState(null);
 
   const ctx = useContext(RecipesContext);
