@@ -16,12 +16,12 @@ export default function RecipeFilter(props) {
   function onFilterHandler(e) {
     const year = e.target.textContent;
     setFilteredYear(year);
-    ctx.onFilterRecipes(year);
+    ctx.onAddYearFilter(year);
   }
 
   function onClearFilter() {
     setFilteredYear(null);
-    ctx.onRemoveFilterRecipes();
+    ctx.onRemoveYearFilter();
   }
 
   return (

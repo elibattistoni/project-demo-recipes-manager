@@ -109,8 +109,6 @@ export default function RecipeForm(props) {
     clearUrl();
     clearIngredients();
     clearInstructions();
-
-    props.onClose();
   };
 
   // css classes

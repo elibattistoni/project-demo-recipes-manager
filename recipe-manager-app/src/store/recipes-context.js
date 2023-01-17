@@ -8,15 +8,15 @@ const RecipesContext = React.createContext({
   onRemoveAllRecipes: () => {},
   activatedRecipe: null,
   onActivateRecipe: () => {},
-  onFilterRecipes: () => {},
-  filteredRecipes: [],
-  onRemoveFilterRecipes: () => {},
+  onAddYearFilter: () => {},
+  onRemoveYearFilter: () => {},
+  yearFilter: null,
 });
 
 export function RecipesContextProvider(props) {
   const [recipes, setRecipes] = useState([]);
   const [activatedRecipe, setActivatedRecipe] = useState(null);
-  const [filteredRecipes, setFilteredRecipes] = useState([]);
+  const [yearFilter, setYearFilter] = useState(null);
 
   function uploadUpdateRecipes(recipeArray) {
     localStorage.setItem("recipes", JSON.stringify(recipeArray));
@@ -63,32 +63,13 @@ export function RecipesContextProvider(props) {
     setActivatedRecipe(recipes.filter((rec) => rec.id === recipeId).at(0));
   }
 
-  function onFilterRecipes(year) {
-    setFilteredRecipes(
-      recipes.filter(
-        (rec) => new Date(rec.date).getFullYear().toString() === year
-      )
-    );
+  function onAddYearFilter(year) {
+    setYearFilter(year);
   }
 
-  function onRemoveFilterRecipes() {
-    setFilteredRecipes([]);
+  function onRemoveYearFilter() {
+    setYearFilter(null);
   }
-
-  useEffect(() => {
-    if (filteredRecipes.length > 0) {
-      setFilteredRecipes(
-        recipes.filter((rec) => {
-          if (
-            new Date(rec.date).getFullYear() ===
-            new Date(filteredRecipes[0].date).getFullYear()
-          ) {
-            return true;
-          }
-        })
-      );
-    }
-  }, [recipes]);
 
   return (
     <RecipesContext.Provider
@@ -99,9 +80,9 @@ export function RecipesContextProvider(props) {
         onRemoveAllRecipes,
         activatedRecipe,
         onActivateRecipe,
-        filteredRecipes,
-        onFilterRecipes,
-        onRemoveFilterRecipes,
+        onAddYearFilter,
+        onRemoveYearFilter,
+        yearFilter,
       }}
     >
       {props.children}
