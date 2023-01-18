@@ -34,3 +34,9 @@
 .icon {
   font-size: 1.4rem;
 }
+
+@media(min-width:112em) {
+  .new-recipe__card {
+    max-width: 134rem
+  }
+}

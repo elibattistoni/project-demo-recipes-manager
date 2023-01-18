@@ -53,3 +53,9 @@
   color: var(--color-grey-w-20);
   border-color: var(--color-grey-w-10);
 }
+
+@media(min-width:112em) {
+  .filterContainer {
+    max-width: 160rem
+  }
+}
