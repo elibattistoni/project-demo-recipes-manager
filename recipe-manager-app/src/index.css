@@ -168,6 +168,10 @@ button {
   transition: all 0.3s;
 }
 
+header, span, h1, h2, p {
+  word-break: break-word;
+}
+
 .blue {
   background-color: var(--color-blue-light-40);
 }

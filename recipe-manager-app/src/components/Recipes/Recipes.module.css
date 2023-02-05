@@ -42,3 +42,32 @@
     column-gap: 3rem;
   }
 }
+
+
+@media(max-width:57em) {
+  .recipesContainer {
+    max-width: 85%;
+    column-gap: 2rem;
+  }
+
+  .footerTrash {
+    max-width: 85%;
+    margin: 4rem auto;
+    text-align: center;
+  }
+}
+
+@media(max-width:35em) {
+
+  .trashIcon {
+    font-size: 1.2rem;
+  }
+
+  .trashBtn {
+    margin: 0;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    padding: 0;
+  }
+}

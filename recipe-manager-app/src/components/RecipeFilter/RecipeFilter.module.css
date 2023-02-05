@@ -59,3 +59,39 @@
     max-width: 160rem
   }
 }
+
+
+@media(max-width:57em) {
+  /* .filterContainer {
+    width: 20%
+  }
+
+  .filterButtons {
+    flex-direction: column;
+    gap: 0
+  }
+
+  .btnClear {
+    margin: 1rem 0;
+    align-self: center;
+  } */
+
+  .filterBtn, .btnClear {
+    font-size: 1.2rem;
+  }
+}
+
+@media(max-width:35em) {
+
+  .filterBtn, .btnClear {
+    padding: 1rem
+  }
+}
+
+
+@media(max-width:25em) {
+
+  .filterBtn, .btnClear {
+    font-size: 1rem;
+  }
+}
