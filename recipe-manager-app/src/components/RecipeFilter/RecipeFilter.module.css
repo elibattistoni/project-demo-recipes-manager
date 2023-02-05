@@ -54,6 +54,9 @@
   border-color: var(--color-grey-w-10);
 }
 
+
+/* ============== media queries ===================== */
+
 @media(min-width:112em) {
   .filterContainer {
     max-width: 160rem

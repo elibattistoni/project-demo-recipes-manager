@@ -72,6 +72,9 @@ button:hover, button:active {
   border: 1px solid #b40e0e
 }
 
+
+/* ============== media queries ===================== */
+
 @media(max-width:57em) {
   form {
     width: 80%

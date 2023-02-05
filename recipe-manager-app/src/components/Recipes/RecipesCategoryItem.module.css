@@ -25,6 +25,8 @@
   overflow-y: scroll;
 }
 
+/* ============== media queries ===================== */
+
 @media(max-width:87em) {
   .columnHeader {
     font-size: 1.8rem;

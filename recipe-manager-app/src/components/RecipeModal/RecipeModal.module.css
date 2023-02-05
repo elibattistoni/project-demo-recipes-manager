@@ -101,6 +101,9 @@ footer {
   }
 }
 
+/* ============== media queries ===================== */
+
+
 @media(min-width:112em) {
   .modal {
     max-width: 72rem;

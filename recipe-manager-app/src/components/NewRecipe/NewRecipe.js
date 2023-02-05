@@ -15,13 +15,10 @@ export default function NewRecipe() {
   const hideFormHandler = () => setWantsToAdd(false);
 
   return (
-    <section className={classes["new-recipe__card"]}>
-      <button
-        className={classes["new-recipe__btn"]}
-        onClick={toggleFormHandler}
-      >
+    <section className={classes.newRecipeCard}>
+      <button className={classes.newRecipeBtn} onClick={toggleFormHandler}>
         <FaPlus className={classes.icon} />
-        <span>Add New Recipe</span>
+        <span className={classes.btnLabel}>Add New Recipe</span>
       </button>
       {wantsToAdd && <RecipeForm onClose={hideFormHandler} />}
     </section>

@@ -1,4 +1,4 @@
-.new-recipe__card {
+.newRecipeCard {
   background-color: var(--color-pink-light-60);
   width: 75%;
   margin: auto;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.new-recipe__btn {
+.newRecipeBtn {
   background-color: var(--color-pink-light-20);
   padding: 1.4rem 2.4rem;
   border: 2px solid var(--color-pink);
@@ -23,11 +23,11 @@
   gap: 1rem;
 }
 
-.new-recipe__btn span {
+.btnLabel {
   font-weight: 600;
 }
 
-.new-recipe__btn:hover, .new-recipe__btn:active {
+.newRecipeBtn:hover, .newRecipeBtn:active {
   background-color: var(--color-pink);
 }
 
@@ -35,30 +35,33 @@
   font-size: 1.4rem;
 }
 
+
+/* ============== media queries ===================== */
+
 @media(min-width:112em) {
-  .new-recipe__card {
+  .newRecipeCard {
     max-width: 134rem
   }
 }
 
 @media(max-width:87em) {
-  .new-recipe__card {
+  .newRecipeCard {
     width: 70%
   }
 }
 
 @media(max-width:57em) {
-  .new-recipe__card {
+  .newRecipeCard {
     width: 85%
   }
 
-  .new-recipe__btn {
+  .newRecipeBtn {
     font-size: 1.4rem;
   }
 }
 
 @media(max-width:25em) {
-  .new-recipe__btn {
+  .newRecipeBtn {
     font-size: 1.2rem;
   }
 }
