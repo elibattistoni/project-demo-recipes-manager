@@ -71,3 +71,46 @@ button:hover, button:active {
 .invalid input, .invalid textarea, .invalid select {
   border: 1px solid #b40e0e
 }
+
+@media(max-width:57em) {
+  form {
+    width: 80%
+  }
+
+  form, button {
+    font-size: 1.4rem;
+  }
+
+  select option {
+    font-size: 1.2rem;
+  }
+
+  .inputFields {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 1rem;
+  }
+
+  .inputField label {
+    align-self: center;
+  }
+
+  .inputFieldUrl, .inputFieldIngredients, .inputFieldInstructions {
+    grid-column: 1 / 1
+  }
+}
+
+@media(max-width:25em) {
+  form, button {
+    font-size: 1.2rem;
+  }
+
+  select option {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 1rem
+  }
+
+}

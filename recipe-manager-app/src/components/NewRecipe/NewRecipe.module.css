@@ -40,3 +40,25 @@
     max-width: 134rem
   }
 }
+
+@media(max-width:87em) {
+  .new-recipe__card {
+    width: 70%
+  }
+}
+
+@media(max-width:57em) {
+  .new-recipe__card {
+    width: 85%
+  }
+
+  .new-recipe__btn {
+    font-size: 1.4rem;
+  }
+}
+
+@media(max-width:25em) {
+  .new-recipe__btn {
+    font-size: 1.2rem;
+  }
+}

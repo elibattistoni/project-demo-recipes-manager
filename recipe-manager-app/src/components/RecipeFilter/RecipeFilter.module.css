@@ -62,19 +62,10 @@
 
 
 @media(max-width:57em) {
-  /* .filterContainer {
-    width: 20%
-  }
 
-  .filterButtons {
-    flex-direction: column;
-    gap: 0
+  .filterContainer {
+    max-width: 85%;
   }
-
-  .btnClear {
-    margin: 1rem 0;
-    align-self: center;
-  } */
 
   .filterBtn, .btnClear {
     font-size: 1.2rem;

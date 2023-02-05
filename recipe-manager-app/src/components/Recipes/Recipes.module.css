@@ -47,7 +47,7 @@
 @media(max-width:57em) {
   .recipesContainer {
     max-width: 85%;
-    column-gap: 2rem;
+    column-gap: 1rem;
   }
 
   .footerTrash {
