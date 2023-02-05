@@ -31,10 +31,10 @@ export default function RecipesCategoryItem(props) {
 
   return (
     <div className={classes.recipesColumn}>
-      <header className={`${currentCategoryColor}`}>
+      <header className={`${currentCategoryColor} ${classes.columnHeader}`}>
         {currentCategoryLabel}
       </header>
-      <main>
+      <main className={classes.recipesList}>
         {categoryRecipes.map((recipe) => (
           <RecipeItem
             key={recipe.id}

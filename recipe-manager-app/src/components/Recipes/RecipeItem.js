@@ -11,10 +11,16 @@ export default function RecipeItem(props) {
 
   return (
     <div className={classes.recipeCard} onClick={viewRecipeHandler}>
-      <header className={`${props.color}-lighter`}>{props.recipe.title}</header>
-      <main>
-        <img src={props.recipe.imageUrl} alt={props.recipe.title} />
-      </main>
+      <header className={`${props.color}-lighter ${classes.recipeItemHeader}`}>
+        {props.recipe.title}
+      </header>
+      <div>
+        <img
+          src={props.recipe.imageUrl}
+          alt={props.recipe.title}
+          className={classes.recipeItemImage}
+        />
+      </div>
     </div>
   );
 }

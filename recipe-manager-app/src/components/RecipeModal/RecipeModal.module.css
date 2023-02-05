@@ -44,11 +44,11 @@
   gap: 1rem;
 }
 
-.modalMain img {
+.imageModal {
   border-radius: 0;
   max-width: 900px;
   max-height: 400px;
-  object-fit: cover;
+  display: block;
 }
 
 .modalIngredients, .modalInstructions {

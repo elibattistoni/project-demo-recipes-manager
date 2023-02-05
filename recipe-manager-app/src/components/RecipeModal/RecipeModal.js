@@ -30,7 +30,11 @@ function Overlay(props) {
         <span>{recipe.date}</span>
       </header>
       <main className={classes.modalMain}>
-        <img src={recipe.imageUrl} alt={recipe.title} />
+        <img
+          src={recipe.imageUrl}
+          alt={recipe.title}
+          className={classes.imageModal}
+        />
         <div className={classes.modalIngredients}>
           <h2>Ingredients</h2>
           <span>{recipe.ingredients}</span>
