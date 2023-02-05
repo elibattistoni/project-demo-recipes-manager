@@ -36,3 +36,9 @@
     max-width: 160rem
   }
 }
+
+@media(max-width:87em) {
+  .recipesContainer {
+    column-gap: 3rem;
+  }
+}

@@ -40,7 +40,7 @@ function Overlay(props) {
           <span>{recipe.instructions}</span>
         </div>
       </main>
-      <footer>
+      <footer className={classes.footerModal}>
         <button
           type="button"
           className={classes.trashBtn}

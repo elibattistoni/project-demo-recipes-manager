@@ -100,3 +100,82 @@ footer {
     transform: translateY(0);
   }
 }
+
+@media(min-width:112em) {
+  .modal {
+    max-width: 72rem;
+    /* to center the modal */
+    left: calc(50% - 72rem/2)
+  }
+}
+
+
+@media(max-width:87em) {
+
+  .modalHeader h1 {
+    font-size: 1.8rem
+  }
+
+  .modalHeader span {
+    font-size: 1.4rem;
+  }
+
+  .modalIngredients h2, .modalInstructions h2 {
+    font-size: 1.8rem;
+  }
+
+  .modalIngredients span, .modalInstructions span {
+    font-size: 1.4rem;
+  }
+
+  .trashBtn {
+    margin: 0;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    padding: 0
+  }
+
+  .trashIcon {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media(max-width:57em) {
+
+  .modal {
+    min-width: 36rem;
+    /* to center the modal */
+    left: calc(50% - 36rem/2)
+  }
+
+  .footerModal {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .modalMain {
+    gap: 2rem
+  }
+}
+
+@media(max-width: 35em) {
+  .modal {
+    min-width: 30rem;
+    left: calc(50% - 30rem/2)
+  }
+
+  .modalHeader {
+    flex-direction: column;
+    gap: 1.6rem
+  }
+
+}
+
+@media(max-width: 25em) {
+  .modal {
+    min-width: 25rem;
+    left: calc(50% - 25rem/2)
+  }
+}

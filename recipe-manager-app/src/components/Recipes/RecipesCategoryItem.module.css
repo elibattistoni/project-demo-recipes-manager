@@ -22,3 +22,10 @@
   gap: 2rem;
   margin-bottom: 2rem
 }
+
+@media(max-width:87em) {
+  .recipesColumn header {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
