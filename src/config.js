@@ -26,37 +26,38 @@ export const initialMockedRecipes = [
     title: "Pasta alla carbonara",
     category: "risottoPasta",
     imageUrl:
-      "https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg",
+      "https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     date: "12/15/2022",
     ingredients: "Pasta, 200 gr; bacon, 1/2 cup;",
     instructions: "Cook the pasta and in another pan cook the bacon",
   },
   {
     id: "2",
-    title: "Risotto radicchio e salsiccia",
+    title: "Risotto con i funghi",
     category: "risottoPasta",
     imageUrl:
-      "https://blog.giallozafferano.it/maniamore/wp-content/uploads/2021/02/RIOTTO-RADICCHIO-E-SALSICCIA-6495-720x480.jpg",
+      "https://images.unsplash.com/photo-1637361874063-e5e415d7bcf7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     date: "9/5/2022",
-    ingredients: "Rice, 1 cup; sausage, 1/2 cup;",
-    instructions: "Cook the rice with broth and in the end add the sausage",
+    ingredients: "Rice, 1 cup; mushrooms, 1/2 cup;",
+    instructions: "Cook the rice with broth and in the end add the mushrooms",
   },
   {
     id: "3",
-    title: "Vitello Tonnato",
+    title: "Roastbeef",
     category: "meatFish",
     imageUrl:
-      "https://www.cucchiaio.it/content/cucchiaio/it/ricette/2010/06/ricetta-vitello-tonnato/_jcr_content/header-par/image_single.img.jpg/1594134618443.jpg",
+      "https://images.unsplash.com/photo-1602540953134-e753ac78e81d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
     date: "4/10/2021",
-    ingredients: "Calf meat, 1 kg; tuna fish, 1 cup;",
-    instructions: "Cook the meat overnight and make a sause with the tuna",
+    ingredients: "Calf meat, 1 kg; bread, 1 piece; avocado, 1 piece;",
+    instructions:
+      "Cook the meat overnight and make a sandwich with the other ingredients",
   },
   {
     id: "4",
     title: "Polpo alla brace",
     category: "meatFish",
     imageUrl:
-      "https://www.ricettedalmondo.it/images/foto-ricette/p/32744-polpo-alla-griglia.jpg",
+      "https://images.unsplash.com/photo-1526243070121-8040f7c9cc1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
     date: "7/20/2021",
     ingredients: "Octopus, 1 piece; lemon juice;",
     instructions: "Cook the octopus and serve with a sprinkle of lemon juice",
@@ -66,7 +67,7 @@ export const initialMockedRecipes = [
     title: "Patate arrosto",
     category: "veggiesSides",
     imageUrl:
-      "https://www.giallozafferano.it/images/242-24202/Patate-al-forno_450x300.jpg",
+      "https://images.unsplash.com/photo-1631898039984-fd5f61fe8732?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     date: "4/21/2022",
     ingredients: "Potato, 1 kg; extra virgin olive oil, 1 tbsp; salt, 1tsp;",
     instructions: "Cut the potatoes and bake them",
@@ -76,7 +77,7 @@ export const initialMockedRecipes = [
     title: "Melanzane alla parmigiana",
     category: "veggiesSides",
     imageUrl:
-      "https://www.fattoincasadabenedetta.it/wp-content/uploads/2022/02/AdobeStock_296698970-min-min-1200x900.jpeg",
+      "https://images.unsplash.com/photo-1632229095740-8c75082087c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
     date: "1/15/2023",
     ingredients: "Aubergines, 3; salt, 1/2 tsp;",
     instructions: "Cut the aubergines in slices and fry them",
@@ -86,20 +87,20 @@ export const initialMockedRecipes = [
     title: "Zucchini Brownies",
     category: "dessertsSweets",
     imageUrl:
-      "https://iambaker.net/wp-content/uploads/2018/06/zucchini-brownies-1.jpg",
+      "https://images.unsplash.com/photo-1607920591413-4ec007e70023?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     date: "1/15/2023",
     ingredients: "Zucchini, 2 cups; cacao powder, 1/2 cup;",
     instructions: "Mix the shredded with the cacao powder",
   },
   {
     id: "8",
-    title: "Salame di cioccolato",
+    title: "Chocolate fondant",
     category: "dessertsSweets",
     imageUrl:
-      "https://www.fattoincasadabenedetta.it/wp-content/uploads/2016/03/Senza-titolo-1-2.jpg",
+      "https://images.unsplash.com/photo-1600326145308-d7d5a04f4ce6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
     date: "1/10/2023",
     ingredients: "Chocolate, 2 cups; cacao powder, 1/2 cup; Butter, 1 cup;",
     instructions:
-      "Break the cookies and mix them with all the remaining ingredients",
+      "Break the cookies and mix them with all the remaining ingredients and bake",
   },
 ];
