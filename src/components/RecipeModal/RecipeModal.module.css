@@ -49,6 +49,7 @@
   max-width: 900px;
   max-height: 400px;
   display: block;
+  object-fit: cover;
 }
 
 .modalIngredients, .modalInstructions {
@@ -161,6 +162,10 @@ footer {
   .modalMain {
     gap: 2rem
   }
+
+  .imageModal {
+    height: 30rem
+  }
 }
 
 @media(max-width: 35em) {
@@ -174,7 +179,12 @@ footer {
     gap: 1.6rem
   }
 
+  .imageModal {
+    height: 20rem
+  }
 }
+
+
 
 @media(max-width: 25em) {
   .modal {

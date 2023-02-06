@@ -14,7 +14,7 @@ export default function RecipeItem(props) {
       <header className={`${props.color}-lighter ${classes.recipeItemHeader}`}>
         {props.recipe.title}
       </header>
-      <div>
+      <div className={classes.imageContainer}>
         <img
           src={props.recipe.imageUrl}
           alt={props.recipe.title}
